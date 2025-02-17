@@ -206,6 +206,145 @@ print("Average grade:", average)
 
 # JavaScript
 let grades = [85, 90, 78, 92, 88];
-let sumGrades = grades.reduce((a, b) => a + b, 0 ▋
+let sumGrades = grades.reduce((a, b) => a + b, 0);
+let average = sumGrades / grades.length;
+console.log("Average grade:", average);
 
+# C++
+int grades[] = {85, 90, 78, 92, 88};
+int sumGrades = 0;
+for (int grade : grades) {
+    sumGrades += grade;
+}
+double average = sumGrades / 5.0;
+std::cout << "Average grade: " << average << std::endl;
+
+# Java
+int[] grades = {85, 90, 78, 92, 88};
+int sumGrades = 0;
+for (int grade : grades) {
+    sumGrades += grade;
+}
+double average = (double) sumGrades / grades.length;
+System.out.println("Average grade: " + average);
+```
+
+### Scenario 2: Inventory Management
+A store needs to keep track of inventory levels for various products. Arrays can be used to store inventory data, and for loops can be used to update and check stock levels.
+
+#### Example:
+```python
+# Python
+inventory = [50, 30, 20, 10, 60]
+for i in range(len(inventory)):
+    inventory[i] -= 5
+for stock in inventory:
+    print("Stock level:", stock)
+
+# JavaScript
+let inventory = [50, 30, 20, 10, 60];
+for (let i = 0; i < inventory.length; i++) {
+    inventory[i] -= 5;
+}
+for (let stock of inventory) {
+    console.log("Stock level:", stock);
+}
+
+# C++
+int inventory[] = {50, 30, 20, 10, 60};
+for (int i = 0; i < 5; i++) {
+    inventory[i] -= 5;
+}
+for (int stock : inventory) {
+    std::cout << "Stock level: " << stock << std::endl;
+}
+
+# Java
+int[] inventory = {50, 30, 20, 10, 60};
+for (int i = 0; i < inventory.length; i++) {
+    inventory[i] -= 5;
+}
+for (int stock : inventory) {
+    System.out.println("Stock level: " + stock);
+}
+```
+
+### Scenario 3: Combining Data from Multiple Sources
+A data analyst needs to combine data from multiple sources. Arrays can be used to store data from each source, and merging techniques can be used to combine them.
+
+#### Example:
+```python
+# Python
+source1 = [10, 20, 30]
+source2 = [40, 50, 60]
+combinedData = source1 + source2
+for data in combinedData:
+    print(data)
+
+# JavaScript
+let source1 = [10, 20, 30];
+let source2 = [40, 50, 60];
+let combinedData = source1.concat(source2);
+for (let data of combinedData) {
+    console.log(data);
+}
+
+# C++
+int source1[] = {10, 20, 30};
+int source2[] = {40, 50, 60};
+int combinedData[6];
+std::copy(source1, source1 + 3, combinedData);
+std::copy(source2, source2 + 3, combinedData + 3);
+for (int data : combinedData) {
+    std::cout << data << std::endl;
+}
+
+# Java
+int[] source1 = {10, 20, 30};
+int[] source2 = {40, 50, 60};
+int[] combinedData = new int[source1.length + source2.length];
+System.arraycopy(source1, 0, combinedData, 0, source1.length);
+System.arraycopy(source2, 0, combinedData, source1.length, source2.length);
+for (int data : combinedData) {
+    System.out.println(data);
+}
+```
+
+### Scenario 4: Resizing Arrays for Dynamic Data
+An application needs to handle dynamic data where the number of elements can change. Arrays can be resized as needed to accommodate new data.
+
+#### Example:
+```python
+# Python
+data = [1, 2, 3]
+resizedArray = data + [0] * 2
+for value in resizedArray:
+    print(value)
+
+# JavaScript
+let data = [1, 2, 3];
+let resizedArray = data.concat(new Array(2).fill(0));
+for (let value of resizedArray) {
+    console.log(value);
+}
+
+# C++
+int data[] = {1, 2, 3};
+int resizedArray[5];
+std::copy(data, data + 3, resizedArray);
+resizedArray[3] = 0;
+resizedArray[4] = 0;
+for (int value : resizedArray) {
+    std::cout << value << std::endl;
+}
+
+# Java
+int[] data = {1, 2, 3};
+int[] resizedArray = new int[5];
+System.arraycopy(data, 0, resizedArray, 0, data.length);
+resizedArray[3] = 0;
+resizedArray[4] = 0;
+for (int value : resizedArray) {
+    System.out.println(value);
+}
 ```
